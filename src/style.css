@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --accent: 324 68% 60%;
+  --primary: 0 0% 87%;
+  --secondary: 0 0% 12%;
+  --background: 0 0% 0%;
+}
+:root[data-theme="dark"] {
+  --accent: hsla(324, 68%, 60%, 100%);
+  --primary: hsla(0, 0%, 87%, 100%);
+  --secondary: hsla(0, 0%, 12%, 100%);
+  --background: hsla(0, 0%, 0%, 100%);
+}
+
+@layer base {
+  :root {
+    @apply bg-background;
+    @apply text-primary;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
+  }
+  h5 {
+    @apply text-lg;
+    @apply opacity-80;
+  }
+  h6 {
+    @apply text-lg;
+    @apply opacity-50;
+  }
+}
