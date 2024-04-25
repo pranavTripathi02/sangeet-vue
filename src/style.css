@@ -13,6 +13,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --danger: 0 60% 40%;
 }
 :root {
   --accent: 324 68% 60%;
@@ -34,19 +35,29 @@
   }
   h1 {
     @apply text-3xl;
+    @apply leading-tight;
+    @apply tracking-tighter;
   }
   h2 {
     @apply text-2xl;
+    @apply leading-snug;
+    @apply tracking-tight;
   }
   h3 {
     @apply text-xl;
+    @apply leading-normal;
+    @apply tracking-normal;
   }
   h4 {
     @apply text-lg;
+    @apply leading-relaxed;
+    @apply tracking-wide;
   }
   h5 {
     @apply text-lg;
     @apply opacity-80;
+    @apply leading-loose;
+    @apply tracking-wider;
   }
   h6 {
     @apply text-lg;

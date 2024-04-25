@@ -3,11 +3,11 @@ import VueFeather from "vue-feather";
 </script>
 <template>
   <aside
-    class="fixed h-full w-[128px] space-y-8 bg-secondary px-4 py-16 lg:w-[256px]"
+    class="fixed h-full w-24 space-y-8 overflow-scroll bg-secondary px-2 py-16 lg:w-[256px] lg:px-4"
   >
     <div class="flex flex-col space-y-4">
       <RouterLink
-        active-class="bg-primary/20 text-primary opacity-100"
+        exact-active-class="bg-primary/20 text-primary opacity-100"
         class="rounded opacity-50 duration-200 hover:opacity-100"
         to="/"
       >
@@ -19,7 +19,7 @@ import VueFeather from "vue-feather";
         </div>
       </RouterLink>
       <RouterLink
-        active-class="bg-primary/20 text-primary opacity-100"
+        exact-active-class="bg-primary/20 text-primary opacity-100"
         class="rounded opacity-50 duration-200 hover:opacity-100"
         to="/feed"
       >
@@ -31,7 +31,7 @@ import VueFeather from "vue-feather";
         </div>
       </RouterLink>
       <RouterLink
-        active-class="bg-primary/20 text-primary opacity-100"
+        exact-active-class="bg-primary/20 text-primary opacity-100"
         class="rounded opacity-50 duration-200 hover:opacity-100"
         to="/search"
       >
@@ -46,7 +46,7 @@ import VueFeather from "vue-feather";
     <div class="h-0 w-full border-t border-primary bg-background" />
     <div class="flex flex-col space-y-4">
       <RouterLink
-        active-class="bg-primary/20 text-primary opacity-100"
+        exact-active-class="bg-primary/20 text-primary opacity-100"
         class="rounded opacity-50 duration-200 hover:opacity-100"
         to="/library"
       >

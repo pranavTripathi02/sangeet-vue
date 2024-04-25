@@ -1,5 +1,5 @@
 <script setup>
-import underConstructionSVG from "../../public/underConstruction.svg";
+import underConstructionSVG from "../assets/underConstruction.svg";
 </script>
 
 <template>

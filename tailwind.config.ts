@@ -16,6 +16,7 @@ export default {
         primary: "hsl(var(--primary)/<alpha-value>)",
         secondary: "hsl(var(--secondary)/<alpha-value>)",
         background: "hsl(var(--background)/<alpha-value>)",
+        danger: "hsl(var(--danger)/<alpha-value>)",
       },
       fontSize: {
         "3xl": "2.938rem",
