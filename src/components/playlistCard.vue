@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { TPlaylist } from "../types";
+import VueFeather from "vue-feather";
 
 type TProps = {
   playlist: TPlaylist;
@@ -18,6 +19,9 @@ const props = defineProps<TProps>();
         class="invisible absolute bottom-2 right-2 h-12 w-12 translate-y-full cursor-pointer rounded-full bg-accent text-background opacity-0 duration-75 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
       >
         <!-- play/pause btn svg -->
+        <div class="m-auto flex h-full w-full items-center justify-center">
+          <vue-feather type="play" size="32" />
+        </div>
       </div>
     </div>
     <!-- info -->
