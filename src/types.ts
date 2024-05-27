@@ -1,38 +1,56 @@
 export type TArtist = {
-  name: string;
-  image: string;
-  albums?: TAlbum[];
-  tracks?: TTrack[];
+  _id: string;
+  first_name: string;
+  last_name: string;
+  artist_image: string;
+  listens: string;
+  albums?: { id: string }[];
+  tracks?: { id: string }[];
 };
 
 export type TAlbum = {
-  name: string;
+  _id: string;
+  title: string;
   image: string;
-  tracks: number;
+  tracks: { id: string }[];
+  artist?: { id: string; first_name?: string; last_name?: string };
   duration?: number;
 };
 
 export type TTrack = {
-  id: string;
+  _id: string;
   title: string;
   image?: string;
-  artist: TArtist;
-  album?: TAlbum;
+  artist: {
+    id: number;
+    first_name: string;
+    last_name: string;
+  };
+  album?: {
+    id: number;
+    title: string;
+  };
   listens: number;
-  trendingRank: number;
-  trackNum?: number;
+  // trendingRank?: number;
+  track_num?: number;
   addedOn: Date;
-  link?: string;
+  track_uri?: string;
 };
 
 export type TPlaylist = {
+  _id: string;
   title: string;
-  tracks: TTrack[];
+  description?: string;
+  tracks: { id: string }[];
   image: string;
-  creator: TUser;
+  creator?: {
+    id: string;
+    name: string;
+  };
 };
 
 export type TUser = {
+  _id: string;
   name: string;
   email: string;
   password?: string;

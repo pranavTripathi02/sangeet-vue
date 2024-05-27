@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { RouterView, RouterLink } from "vue-router";
 import Logo from "../components/logo.vue";
 </script>
@@ -14,7 +14,11 @@ import Logo from "../components/logo.vue";
     <div class="w-full text-center">
       <span class="text-primary/50 text-sm"
         >Go back to
-        <router-link to="/" class="underline">home</router-link>
+        <router-link
+          to="/"
+          class="underline"
+          >home</router-link
+        >
       </span>
     </div>
   </div>

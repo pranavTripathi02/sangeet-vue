@@ -3,7 +3,7 @@ import VueFeather from "vue-feather";
 </script>
 <template>
   <aside
-    class="fixed h-full w-24 space-y-8 overflow-scroll bg-secondary px-2 py-16 lg:w-[256px] lg:px-4"
+    class="fixed h-full w-24 space-y-8 overflow-clip bg-secondary px-2 py-16 lg:w-[256px] lg:px-4"
   >
     <div class="flex flex-col space-y-4">
       <RouterLink

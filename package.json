@@ -9,7 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.7.2",
+    "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
+    "pinia": "^2.1.7",
     "vue": "^3.4.21",
     "vue-feather": "^2.0.0",
     "vue-router": "^4.3.2"

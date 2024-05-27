@@ -14,6 +14,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --danger: 0 60% 40%;
+  --success: 120 60% 40%;
 }
 :root {
   --accent: 324 68% 60%;

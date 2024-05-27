@@ -8,6 +8,7 @@ import Library from "./protected/Library.vue";
 import Search from "./Search.vue";
 import Register from "./auth/Register.vue";
 import Login from "./auth/Login.vue";
+import Album from "./Album.vue";
 
 export {
   Home,
@@ -20,4 +21,5 @@ export {
   Search,
   Register,
   Login,
+  Album,
 };

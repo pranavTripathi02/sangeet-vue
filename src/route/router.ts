@@ -8,9 +8,12 @@ import {
   UnderConstruction,
   Register,
   Login,
+  Playlist,
+  Artist,
+  Album,
 } from "../pages";
-import DefaultLayout from "../layouts/defaultLayout.vue";
-import AuthLayout from "../layouts/authLayout.vue";
+
+import { DefaultLayout, AuthLayout } from "../layouts/";
 
 const routes = [
   {
@@ -21,6 +24,9 @@ const routes = [
       { path: "/feed", component: Feed },
       { path: "/search", component: Search },
       { path: "/library", component: Library },
+      { path: "/playlists/:id", name: "playlists", component: Playlist },
+      { path: "/artists/:id", name: "artists", component: Artist },
+      { path: "/albums/:id", name: "albums", component: Album },
     ],
   },
   {

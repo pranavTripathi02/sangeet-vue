@@ -2,6 +2,8 @@
 import Input from "../../components/primitives/input.vue";
 import Button from "../../components/primitives/button.vue";
 import { ref } from "vue";
+import api from "../../api/api";
+import { router } from "../../route/router";
 
 const emailRef = ref("");
 const passwordRef = ref("");
@@ -9,17 +11,37 @@ const isLoading = ref(false);
 const isError = ref(false);
 const errMsg = ref("");
 
+const email = ref("");
+const password = ref("");
+
 const handleSubmit = async (e) => {
   e.preventDefault();
   isLoading.value = true;
+  isError.value = false;
+  errMsg.value = "";
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const data = await api.post(
+      "/auth/login",
+      {
+        user_email: email.value,
+        user_password: password.value,
+      },
+      {
+        withCredentials: true,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      },
+    );
+    // reset form after successful submission
+    email.value = "";
+    password.value = "";
+    router.push("/");
   } catch (err) {
     isError.value = true;
     errMsg.value = err;
   }
   isLoading.value = false;
-  console.log("to", isLoading.value);
 };
 </script>
 <template>
@@ -30,17 +52,16 @@ const handleSubmit = async (e) => {
     <form class="flex w-80 flex-col gap-8 px-2 py-2">
       <div class="flex flex-col gap-2">
         <Input
-          ref="emailRef"
           type="email"
           label="Email"
-          value="emailRef"
-          v-bind:showLabel="true"
+          v-model="email"
+          required
         />
         <Input
-          ref="passwordRef"
           type="password"
           label="Password"
-          v-bind:showLabel="true"
+          v-model="password"
+          required
         />
       </div>
       <Button
@@ -53,7 +74,9 @@ const handleSubmit = async (e) => {
     </form>
     <span class="text-primary/50">
       Don't have an account?
-      <router-link to="/auth/register" class="text-primary underline"
+      <router-link
+        to="/auth/register"
+        class="text-primary underline"
         >Sign up</router-link
       >
       here.

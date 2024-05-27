@@ -17,6 +17,7 @@ export default {
         secondary: "hsl(var(--secondary)/<alpha-value>)",
         background: "hsl(var(--background)/<alpha-value>)",
         danger: "hsl(var(--danger)/<alpha-value>)",
+        success: "hsl(var(--success)/<alpha-value>)",
       },
       fontSize: {
         "3xl": "2.938rem",
@@ -24,6 +25,9 @@ export default {
         xl: "1.688rem",
         lg: "1.312rem",
         sm: "0.750rem",
+      },
+      animation: {
+        slowSpin: "spin 5s cubic-bezier(.08,.38,.94,.63) infinite",
       },
     },
   },

@@ -1,14 +1,37 @@
 <script setup>
 import Button from "../components/primitives/button.vue";
-import SongCard from "../components/songCard.vue";
-// recommended
-// editor's pick
-// artists
-// for you
-// trending
+import api from "../api/api";
+import { defineAsyncComponent } from "vue";
+import TopArtists from "../components/recommendations/topArtists.vue";
+import TrendingPlaylists from "../components/recommendations/trendingPlaylists.vue";
+import FeaturedPlaylists from "../components/recommendations/featuredPlaylists.vue";
+import loadingPlaylists from "../components/loading/loadingPlaylists.vue";
+import loadingArtists from "../components/loading/loadingArtists.vue";
 </script>
 
 <template>
-  <h1>Home</h1>
-  <!-- <SongCard /> -->
+  <Suspense>
+    <template #default>
+      <trending-playlists />
+    </template>
+    <template #fallback>
+      <loading-playlists />
+    </template>
+  </Suspense>
+  <Suspense>
+    <template #default>
+      <featured-playlists />
+    </template>
+    <template #fallback>
+      <loading-playlists />
+    </template>
+  </Suspense>
+  <Suspense>
+    <template #default>
+      <top-artists />
+    </template>
+    <template #fallback>
+      <loading-artists />
+    </template>
+  </Suspense>
 </template>
