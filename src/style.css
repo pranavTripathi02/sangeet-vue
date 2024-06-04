@@ -23,10 +23,10 @@
   --background: 0 0% 0%;
 }
 :root[data-theme="dark"] {
-  --accent: hsla(324, 68%, 60%, 100%);
-  --primary: hsla(0, 0%, 87%, 100%);
-  --secondary: hsla(0, 0%, 12%, 100%);
-  --background: hsla(0, 0%, 0%, 100%);
+  --accent: 324 68% 60%;
+  --primary: 0 0% 87%;
+  --secondary: 0 0% 12%;
+  --background: 0 0% 0%;
 }
 
 @layer base {

@@ -1,5 +1,31 @@
 <template>
-  <span class="w-fit self-center text-center text-[36px] -tracking-[.25rem]"
-    >Sangeet</span
+  <svg
+    width="48"
+    height="48"
+    version="1.1"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
   >
+    <g transform="translate(-55.81 -50.656)">
+      <circle
+        cx="63.81"
+        cy="58.656"
+        r="7.3257"
+        fill="#444"
+        style="paint-order: stroke markers fill"
+      />
+      <path
+        d="m65.802 54.545-0.64906 2.4319-1.3426 4.7429-1.9341 1.3071 2.9026 2.9026c3.6159-0.22978 6.0002-3.0474 6.3132-6.6571l-4.4865-4.4865z"
+        fill="#333"
+        opacity=".97971"
+        style="paint-order: stroke markers fill"
+      />
+      <path
+        transform="rotate(13.375 20.278 -41.238)"
+        d="m86.186 41.412 4e-6 0.28621 7.7e-5 6.0055c-0.35437-0.17229-0.77168-0.26436-1.1987-0.26447-1.1875-7.8e-5 -2.1501 0.69603-2.1499 1.5547 1.47e-4 0.8585 0.96276 1.5544 2.15 1.5542 1.1872-1.28e-4 2.1496-0.69615 2.1494-1.5546l3.76e-4 -6.377c0.0028 4.99e-4 1.2291 0.22045 1.2291 1.2293l-0.0202 0.42038s0.85476-1.5713-0.1771-2.3451l-0.60868-0.45649a1.5866 1.5866 18.425 0 0-0.95251-0.31731l-0.21439 7.3e-5a0.23785 0.23785 128.1 0 0-0.20753 0.26465z"
+        fill="#de54a7"
+        style="paint-order: stroke markers fill"
+      />
+    </g>
+  </svg>
 </template>
